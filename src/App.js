@@ -5,7 +5,7 @@ function App() {
   const [todos, setTodos] = useState([
     { id: 1, complete: false, title: "Buy bread"},
     { id: 2, complete: false, title: "Buy milk"},
-    { id: 3, complete: false, title: "Buy burgers"},
+    { id: 3, complete: true, title: "Buy burgers"},
     { id: 4, complete: false, title: "Buy beer"},
   ])
 

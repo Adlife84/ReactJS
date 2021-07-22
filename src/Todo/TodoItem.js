@@ -18,12 +18,22 @@ function TodoItem({todo, index, onChange}) {
         }
     }
     
+    const classes = []
+
+    if (todo.complete) {
+        classes.push('done');
+        classes.push('btn');
+    }
+    console.log(classes);
+    console.log(classes.join(' '));
+
     return(
         <li style={styles.li}>
-            <span>
+            <span className={classes.join(' ')}>
                 <input 
                     type="checkbox" 
                     style={styles.input}
+                    checked={todo.complete}
                     onChange={() => onChange(todo.id)}
                 />
                 <strong>{index + 1}</strong> 
