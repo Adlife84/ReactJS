@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 function AddTodo({ onCreate }) {
-  const [ value, setValue ] = useState('');
+  const [ value, setValue ] = useState('')
 
   function submitHandler(event) {
-    event.preventDefault();
+    event.preventDefault()
     if(value.trim()){
       onCreate(value)
+      setValue('')
     }
-    setValue('');
   }
 
   return (
